@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Último Feitiço</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cartas-container">
+    <div class="carta-personagem">
+        <button id="botao-morte1" class="estado-morte" onclick="toggleMorte(1)">&#9760;</button>
+        <h2>Soren Fernandez</h2>
+        <div class="barra-vida">
+            <span class="label-barra">Vida:</span>
+            <input type="number" id="vida-soren" value="20" onchange="atualizarBarra('vida-soren', 'vida-max-soren', 'barra-vida-soren')">
+            <span>/</span>
+            <input type="number" id="vida-max-soren" value="100" onchange="atualizarBarra('vida-soren', 'vida-max-soren', 'barra-vida-soren')">
+            <div class="barra-progresso1" id="barra-vida-soren"></div>
+        </div>
+        <div class="barra-xp">
+            <span class="label-barra">XP:</span>
+            <input type="number" id="xp-soren" value="0" onchange="atualizarBarra('xp-soren', 'xp-max-soren', 'barra-xp-soren')">
+            <span>/</span>
+            <input type="number" id="xp-max-soren" value="100" onchange="atualizarBarra('xp-soren', 'xp-max-soren', 'barra-xp-soren')">
+            <div class="barra-progresso2" id="barra-xp-soren"></div>
+        <ul>
+            <li>Força: <input type="number" id="atributo1" value="10" onchange="calcularModificador(1)"> <span id="modificador1">(0)</span> <button onclick="rolarD20(1)">Rolar 1d20</button></li>
+            <li>Destreza: <input type="number" id="atributo2" value="10" onchange="calcularModificador(2)"> <span id="modificador2">(0)</span> <button onclick="rolarD20(2)">Rolar 1d20</button></li>
+            <li>Const.: <input type="number" id="atributo3" value="10" onchange="calcularModificador(3)"> <span id="modificador3">(0)</span> <button onclick="rolarD20(3)">Rolar 1d20</button></li>
+            <li>Int.: <input type="number" id="atributo4" value="10" onchange="calcularModificador(4)"> <span id="modificador4">(0)</span> <button onclick="rolarD20(4)">Rolar 1d20</button></li>
+            <li>Sabedoria: <input type="number" id="atributo5" value="10" onchange="calcularModificador(5)"> <span id="modificador5">(0)</span> <button onclick="rolarD20(5)">Rolar 1d20</button></li>
+            <li>Carisma: <input type="number" id="atributo6" value="10" onchange="calcularModificador(6)"> <span id="modificador6">(0)</span> <button onclick="rolarD20(6)">Rolar 1d20</button></li>
+            <!-- Adicione mais atributos aqui conforme necessário -->
+        </ul>
+    </div>
+</div>
+<div class="cartas-container">
+    <div class="carta-personagem">
+        <button id="botao-morte2" class="estado-morte" onclick="toggleMorte(2)">&#9760;</button>
+        <h2>Aurora</h2>
+        <div class="barra-vida">
+            <span class="label-barra">Vida:</span>
+            <input type="number" id="vida-aurora" value="20" onchange="atualizarBarra('vida-vida-aurora', 'vida-max-aurora', 'barra-vida-aurora')">
+            <span>/</span>
+            <input type="number" id="vida-max-aurora" value="100" onchange="atualizarBarra('vida-aurora', 'vida-max-aurora', 'barra-vida-aurora')">
+            <div class="barra-progresso1" id="barra-vida-aurora"></div>
+        </div>
+        <div class="barra-xp">
+            <span class="label-barra">XP:</span>
+            <input type="number" id="xp-aurora" value="0" onchange="atualizarBarra('xp-aurora', 'xp-max-aurora', 'barra-xp-aurora')"> <!--PAREI AQUI-->
+            <span>/</span>
+            <input type="number" id="xp-max-aurora" value="100" onchange="atualizarBarra('xp-aurora', 'xp-max-aurora', 'barra-xp-aurora')">
+            <div class="barra-progresso2" id="barra-xp-aurora"></div>
+        <ul>
+            <li>Força: <input type="number" id="atributo7" value="10" onchange="calcularModificador(7)"> <span id="modificador7">(0)</span> <button onclick="rolarD20(7)">Rolar 1d20</button></li>
+            <li>Destreza: <input type="number" id="atributo8" value="10" onchange="calcularModificador(8)"> <span id="modificador8">(0)</span> <button onclick="rolarD20(8)">Rolar 1d20</button></li>
+            <li>Const.: <input type="number" id="atributo9" value="10" onchange="calcularModificador(9)"> <span id="modificador9">(0)</span> <button onclick="rolarD20(9)">Rolar 1d20</button></li>
+            <li>Int.: <input type="number" id="atributo10" value="10" onchange="calcularModificador(10)"> <span id="modificador10">(0)</span> <button onclick="rolarD20(10)">Rolar 1d20</button></li>
+            <li>Sabedoria: <input type="number" id="atributo11" value="10" onchange="calcularModificador(11)"> <span id="modificador11">(0)</span> <button onclick="rolarD20(11)">Rolar 1d20</button></li>
+            <li>Carisma: <input type="number" id="atributo12" value="10" onchange="calcularModificador(12)"> <span id="modificador12">(0)</span> <button onclick="rolarD20(12)">Rolar 1d20</button></li>
+            <!-- Adicione mais atributos aqui conforme necessário -->
+        </ul>
+    </div>
+</div>
+<div class="cartas-container">
+    <div class="carta-personagem">
+        <button id="botao-morte3" class="estado-morte" onclick="toggleMorte(3)">&#9760;</button>
+        <h2>Katizza</h2>
+        <div class="barra-vida">
+            <span class="label-barra">Vida:</span>
+            <input type="number" id="vida-katt" value="20" onchange="atualizarBarra('vida-vida-katt', 'vida-max-katt', 'barra-vida-katt')">
+            <span>/</span>
+            <input type="number" id="vida-max-katt" value="100" onchange="atualizarBarra('vida-katt', 'vida-max-katt', 'barra-vida-katt')">
+            <div class="barra-progresso1" id="barra-vida-katt"></div>
+        </div>
+        <div class="barra-xp">
+            <span class="label-barra">XP:</span>
+            <input type="number" id="xp-katt" value="0" onchange="atualizarBarra('xp-katt', 'xp-max-katt', 'barra-xp-katt')">
+            <span>/</span>
+            <input type="number" id="xp-max-katt" value="100" onchange="atualizarBarra('xp-katt', 'xp-max-katt', 'barra-xp-katt')">
+            <div class="barra-progresso2" id="barra-xp-katt"></div>
+        <ul>
+            <li>Força: <input type="number" id="atributo13" value="10" onchange="calcularModificador(13)"> <span id="modificador13">(0)</span> <button onclick="rolarD20(13)">Rolar 1d20</button></li>
+            <li>Destreza: <input type="number" id="atributo14" value="10" onchange="calcularModificador(14)"> <span id="modificador14">(0)</span> <button onclick="rolarD20(14)">Rolar 1d20</button></li>
+            <li>Const.: <input type="number" id="atributo15" value="10" onchange="calcularModificador(15)"> <span id="modificador15">(0)</span> <button onclick="rolarD20(15)">Rolar 1d20</button></li>
+            <li>Int.: <input type="number" id="atributo16" value="10" onchange="calcularModificador(16)"> <span id="modificador16">(0)</span> <button onclick="rolarD20(16)">Rolar 1d20</button></li>
+            <li>Sabedoria: <input type="number" id="atributo17" value="10" onchange="calcularModificador(17)"> <span id="modificador17">(0)</span> <button onclick="rolarD20(17)">Rolar 1d20</button></li>
+            <li>Carisma: <input type="number" id="atributo18" value="10" onchange="calcularModificador(18)"> <span id="modificador18">(0)</span> <button onclick="rolarD20(18)">Rolar 1d20</button></li>
+            <!-- Adicione mais atributos aqui conforme necessário -->
+        </ul>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
