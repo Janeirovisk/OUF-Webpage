@@ -1,0 +1,98 @@
+body {
+    font-family: 'Goudy Bookletter 1911', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #15001a;
+}
+
+.cartas-container {
+    display: inline-flex;
+    justify-content: space-around; /* Distribua uniformemente os elementos ao longo do eixo principal */
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.carta-personagem {
+    background-color: #f4f4f4;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 0 20px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+.barra-vida,
+.barra-xp{
+    margin-bottom: 10px;
+}
+
+.barra-progresso1 {
+    background-color: #c369ff;
+    height: 10px;
+    width: 100%; /* Largura inicial da barra de progresso */
+    margin-top: 5px;
+}
+.barra-progresso2 {
+    background-color: #69ffc6;
+    height: 10px;
+    width: 100%; /* Largura inicial da barra de progresso */
+    margin-top: 5px;
+}
+button {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+li span {
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    background-color: #fff;
+}
+
+.estado-morte {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 20px;
+    color: #ccc;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.estado-morte.ativado {
+    color: #ff69b4;
+}
